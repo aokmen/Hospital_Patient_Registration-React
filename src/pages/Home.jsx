@@ -12,24 +12,12 @@ const Home = () => {
 
   const showImg = (index,dr) => {
     
-    // setShow(!show)
-    // if(show) {
-    //   setDoktor(doktor.filter((item,i)=>(
-    //   item.id===index)))
-    // } else {
-    //   setDoktor(doktorData)
-    //   setHasta(hastaData)
-    // } 
     setShow(!show);
     setDoktor(show ? doktor.filter((i) => i.id === index) : doktorData);
     
-    if(show) {
-      setNews(news.filter((item,i)=>(
-          item.doktorum === dr))) 
-      } else {
-        setDoktor(doktorData)
-        setHasta(hasta)
-      } 
+    if(show) {setNews(news.filter((item,i)=>(item.doktorum === dr)))} 
+    else {setDoktor(doktorData)     
+          setHasta(hasta)} 
 
   }
   return (
@@ -39,16 +27,13 @@ const Home = () => {
         <div className='img-container'>
           {doktor.map((item,i)=>(<div key={i}>
             <img className='image' src={item.resim} alt="" width="180px" height="200px" onClick={()=>showImg(item.id,item.doktor)}/>
-            <p className='dr-name' onClick={()=>showImg(item.id)}>{item.doktor}</p></div>
-          ))}
+            <p className='dr-name' onClick={()=>showImg(item.id)}>{item.doktor}</p></div>))}
           
         </div>
-        <div className={show ? "col" : "row"}>
-        <HastaListe hasta={hasta} setHasta={setHasta} />
+          <div className={show ? "col" : "row"}>
+          <HastaListe hasta={hasta} setHasta={setHasta} />
         </div>
-        {!show && (
-        <HastaEkle doktor={doktor} hasta={hasta} setHasta={setHasta} />
-        )}
+        {!show && (<HastaEkle doktor={doktor} hasta={hasta} setHasta={setHasta} /> )}
         
       </div> 
     </div>
