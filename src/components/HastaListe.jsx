@@ -1,27 +1,10 @@
 import React from 'react'
 
+const HastaListe = ({hasta,setHasta}) => {
 
-
-const HastaListe = ({hasta,setHasta,show}) => {
-
- 
-
-  const cardShow = (index) => {
-
-    setHasta(hasta.map((item,i)=>(
-      item.id===index ? {...item,bittiMi:!item.bittiMi}:item
-    ))) 
-  }
-  const quit = (index) => {
- 
-    setHasta(hasta.filter((item,i)=>(
-      item.id!==index 
-    )))
+  const cardShow = (index) => {setHasta(hasta.map((item,i)=>( item.id===index ? {...item,bittiMi:!item.bittiMi}:item ))) }
+  const quit = (index) => { setHasta(hasta.filter((item,i)=>(item.id!==index))) }
   
-  }
-  
- 
-
   return (
     <div className='row-main'>
         { hasta.map((item,i)=>(
