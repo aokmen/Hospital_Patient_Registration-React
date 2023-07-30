@@ -23,7 +23,6 @@ const HastaEkle = ({doktor,hasta,setHasta}) => {
   return (
     <div>
      
-  
         <form action="" style={{ marginTop:"20px"}} onSubmit={editSubmit}>
           <label htmlFor="">Add Patient Info</label>
           <div><input type="text" placeholder='Your Name...' value={names} onChange={(e)=>setNames(e.target.value)} required
@@ -33,12 +32,6 @@ const HastaEkle = ({doktor,hasta,setHasta}) => {
           <input className="buton" type="submit" value='Register' />
           
         </form>
-        
-    
-        
-   
-      
-      
       </div>
   )
 }
