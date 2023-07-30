@@ -1,7 +1,7 @@
 # Hospital Patient Registration - Project Overview
 
 <h3>Visit: https://hospital-patient-registration-react.netlify.app/</h3>
-<img alt="alt_text" src="./images/dr.gif"/>
+<img alt="alt_text" src="./dr.gif"/>
 
 ## Description:
 In this project, a Hospital Patient Registration application is developed using React. The app allows users to register patients for appointments with different doctors. The project utilizes `useState` hook to manage the state of the app and includes the following components:
