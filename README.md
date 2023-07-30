@@ -1,4 +1,4 @@
-# Hospital Patient Registration - Project Overview
+# Hospital Patient Registration React App - Project Overview
 
 <h3>Visit: https://hospital-patient-registration-react.netlify.app/</h3>
 <img alt="alt_text" src="./dr.gif"/>
